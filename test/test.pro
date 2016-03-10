@@ -3,6 +3,7 @@
 ######################################################################
 
 QT += testlib
+QT -= gui
 TEMPLATE = app
 TARGET = test
 INCLUDEPATH += .

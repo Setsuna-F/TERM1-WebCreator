@@ -5,11 +5,9 @@ before_install:
  - sudo apt-get install qt5-default qttools5-dev-tools
 
 script:
- - qmake -project
  - qmake TERM1-WebCreator.pro
  - make
  - cd test
- - qmake -project "QT += testlib"
  - qmake
  - make
  - ./test
