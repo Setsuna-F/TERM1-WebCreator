@@ -6,5 +6,10 @@ before_install:
 
 script:
  - qmake -project
- - qmake WebCreator.pro
+ - qmake TERM1-WebCreator.pro
  - make
+ - cd test
+ - qmake -project "QT += testlib"
+ - qmake
+ - make
+ - ./test

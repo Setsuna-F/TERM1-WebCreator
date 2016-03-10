@@ -12,5 +12,3 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-//Branche develop
