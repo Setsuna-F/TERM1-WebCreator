@@ -30,6 +30,7 @@ Element::Element(string elementName, string content)
 
 Element::~Element() {}
 
+//Getters and Setters
 string Element::getId() const {return id;}
 string Element::getElementName() const {return elementName;}
 string Element::getContent() const {return content;}
