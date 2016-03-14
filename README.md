@@ -8,7 +8,7 @@ Web Creator
 ### Qu'est-ce que Web Creator ?
 
 Web Creator est un projet d'études menés par un groupe de 4 étudiants en première année de Master Informatique à l'Université de Montpellier.
-Il se déroule dans le cadre des matières TER (HMIN201) et Conduite de Projets (HMINJeSaisPlusCombien).
+Il se déroule dans le cadre des matières TER (HMIN201) et Conduite de Projets (HMIN204).
 Le logiciel vise à permettre aux artistes (peintres, photographes,...) de pouvoir créer leur site sans rien y connaître en développement web. Le site se devra de respecter les normes actuelles de design, et adapté aux mobiles.
 
 #### La composition d'équipe
@@ -16,7 +16,7 @@ Le logiciel vise à permettre aux artistes (peintres, photographes,...) de pouvo
 * Sofien Benharchache :
 * Lucas Chabalier : Gogolus07
 * Emmanuel Guiraud : Leemur-dev
-* Théophile Mandon :
+* Théophile Mandon : HommeQuiParleAuxChevres
 
 ### Caractéristiques du logiciel
 Le logiciel est développé en C++ avec l'utilisation du framework Qt.
@@ -33,7 +33,7 @@ The software aims to allow to artists the creation of its own website, without k
 * Sofien Benharchache :
 * Lucas Chabalier : Gogolus07
 * Emmanuel Guiraud : Leemur-dev
-* Théophile Mandon :
+* Théophile Mandon : HommeQuiParleAuxChevres
 
 ### Software's caracteristics
 The software is developped in C++ with the framework Qt 5.
