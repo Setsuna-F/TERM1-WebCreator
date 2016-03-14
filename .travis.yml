@@ -11,3 +11,6 @@ script:
  - qmake
  - make
  - ./test
+
+notifications:
+  slack: wookieteam:N0hJjPcDdWBDyJ7QzOzjlspG#travis-builds
