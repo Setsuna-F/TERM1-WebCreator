@@ -4,8 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    Source/main.cpp \
-    Source/Element.cpp
+    Src/main.cpp \
+    Src/Element.cpp
 
 HEADERS += \
     Include/Element.h

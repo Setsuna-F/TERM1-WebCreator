@@ -13,6 +13,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <map>
 
 
  /*
@@ -25,7 +26,7 @@ class Element
 		std::string id; /*!< id de l'élément (pour la gestion du CSS) */
 		std::string elementName; /*!< Nom de l'élément (p,h1,h2,etc...) */
 		std::map<std::string, std::string> attributes; /*!< Attributs HTML de l'élément (width,height pour une image par exemple) */
-		std::map<std::string, std::string> style; /*!< Style CSS propres à l'élément et ses éventuels fils */
+        std::map<std::string, std::string> styles; /*!< Style CSS propres à l'élément et ses éventuels fils */
 		std::vector<Element> childElements; /*!< Eléments fils (le vector peut-être vide) */
 		
 		std::string content; /*!< Contenu de l'élément, du texte (utilisé au début du dev) */
@@ -45,9 +46,10 @@ class Element
 		void setElementName(std::string);
 		void setContent(std::string);
 		
-		//Getters for vector element
-		std::string getAttribute(std::string);
-		std::string getStyle(std::string);
+        //Getters for map elements
+        std::string getAttribute(std::string)const;
+        std::string getStyle(std::string)const;
+        //Setters for map elements
 		void setAttribute(std::string, std::string);
 		void setStyle(std::string, std::string);
 	
