@@ -33,7 +33,7 @@ script:
  - cd ../Projets\ annexes/PartieGeneration/Metier
  - make
  - cd Test
- - g++ -o tests -lboost_unit_test_framework-mt test.cpp
+ - g++ -o tests -lboost_unit_test_framework-mt test.cpp 
  - ./tests
 
 notifications:
