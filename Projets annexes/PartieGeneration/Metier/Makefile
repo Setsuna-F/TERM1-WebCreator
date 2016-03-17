@@ -1,11 +1,11 @@
 ######################################################################
-# 								     																						 
-# 	Makefile générique			     		     
-# 								     																					 								     																				
-# @author :Lucas CHABALIER(chabalierlucas1@gmail.com)	     	   
-# @date   : 05/02/2015						
-# 					
-######################################################################		 																		
+#
+# 	Makefile générique
+#
+# @author :Lucas CHABALIER(chabalierlucas1@gmail.com)
+# @date   : 05/02/2015
+#
+######################################################################
 
 
 CPP=g++
@@ -21,7 +21,7 @@ MSQ=@ # Pour masquer les commandes
 MSG=$(MSQ)echo "***"
 
 #Options de compilation
-CFLAGS= -std=c++11 -Wall
+CFLAGS= -std=c++0x -Wall
 
 # L'exécutable
 BIN=app
@@ -40,7 +40,7 @@ endif
 
 ###############################################################
 all: $(BIN)
-	$(MSG) "Compilation terminée en" $(MODE)	
+	$(MSG) "Compilation terminée en" $(MODE)
 
 #Création de l'exécutable
 app: $(OBJ) $(OBJCPP)
@@ -49,7 +49,7 @@ app: $(OBJ) $(OBJCPP)
 ################################################################
 
 # Création des différents *.o à partir des *.cpp
-$(LIBDIR)/%.o: $(SRCDIR)/%.cpp 
+$(LIBDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CPP) -o $@ -c $< $(CFLAGS)
 
 
