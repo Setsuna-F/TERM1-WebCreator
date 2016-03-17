@@ -1,5 +1,5 @@
 langage : c++
-compiler:g++
+compiler: g++
 
 before_install:
  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
