@@ -12,7 +12,7 @@ script:
  - qmake
  - make
  - ./test
- - cd Projets\ annexes/PartieGeneration/Metier
+ - cd ../Projets\ annexes/PartieGeneration/Metier
  - make
  - cd Test
  - g++ -o tests -lboost_unit_test_framework test.cpp
