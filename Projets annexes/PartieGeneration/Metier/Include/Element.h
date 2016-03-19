@@ -55,6 +55,8 @@ class Element
         //Setters for map elements
 		virtual void setAttribute(std::string, std::string);
 		virtual void setStyle(std::string, std::string);
+
+		virtual void addElement(Element&);
 	
 };
 
