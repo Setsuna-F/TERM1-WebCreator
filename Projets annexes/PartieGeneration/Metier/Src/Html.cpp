@@ -1,4 +1,17 @@
-#ifndef HTML_H
-#define HTML_H
+#include "../Include/Html.h"
 
-#endif
+using namespace std;
+
+Html Html::m_instance = Html();
+
+Html::Html() : Element("Html") {
+
+}
+
+Html::~Html() {}
+
+Html& Html::getInstance() 
+{
+	return m_instance;
+}
+
