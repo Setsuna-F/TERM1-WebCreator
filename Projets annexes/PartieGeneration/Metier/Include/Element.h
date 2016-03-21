@@ -26,13 +26,13 @@
 class Element 
 {
 	private:
-		std::string id; /*!< id de l'élément (pour la gestion du CSS) */
-		std::string elementName; /*!< Nom de l'élément (p,h1,h2,etc...) */
-		std::map<std::string, std::string> attributes; /*!< Attributs HTML de l'élément (width,height pour une image par exemple) */
-        std::map<std::string, std::string> styles; /*!< Style CSS propres à l'élément et ses éventuels fils */
-		std::vector<Element*> childElements; /*!< Eléments fils (le vector peut-être vide) */
+		std::string m_id; /*!< id de l'élément (pour la gestion du CSS) */
+		std::string m_elementName; /*!< Nom de l'élément (p,h1,h2,etc...) */
+		std::map<std::string, std::string> m_attributes; /*!< Attributs HTML de l'élément (width,height pour une image par exemple) */
+        std::map<std::string, std::string> m_styles; /*!< Style CSS propres à l'élément et ses éventuels fils */
+		std::vector<Element*> m_childElements; /*!< Eléments fils (le vector peut-être vide) */
 		
-		std::string content; /*!< Contenu de l'élément, du texte (utilisé au début du dev) */
+		std::string m_content; /*!< Contenu de l'élément, du texte (utilisé au début du dev) */
 		
 	public:
 		Element();
@@ -50,14 +50,13 @@ class Element
 		virtual void setContent(std::string);
 		
         //Getters for map elements
-        virtual std::string getAttribute(std::string)const;
-        virtual std::string getStyle(std::string)const;
+        virtual std::string getAttribute(std::string);
+        virtual std::string getStyle(std::string);
         //Setters for map elements
 		virtual void setAttribute(std::string, std::string);
 		virtual void setStyle(std::string, std::string);
 
 		virtual void addElement(Element&);
-	
 };
 
 std::string generateId(std::string);

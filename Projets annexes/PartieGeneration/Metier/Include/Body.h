@@ -10,7 +10,8 @@
 #ifndef BODY_H
 #define BODY_H
 
-#include <iostream> 
+#include <iostream>
+#include "Element.h"
 
 
  /*
@@ -20,10 +21,9 @@
 class Body : public Element
 {
 public:
-	virtual static Body& getInstance();
+	static Body& getInstance();
 private:
 	//On empêche les operator= et les constructeurs par copie ici
-	Body& operator=(const Body&) {}
 	Body(const Body&) {}
 
 	static Body m_instance; /*!< Représente l'unique instance du Body */

@@ -11,7 +11,8 @@
 #ifndef HEAD_H
 #define HEAD_H
 
-#include <iostream> 
+#include <iostream>
+#include "Element.h"
 
 
  /*
@@ -21,10 +22,9 @@
 class Head : public Element
 {
 public:
-	virtual static Head& getInstance();
+	static Head& getInstance();
 private:
 	//On empêche les operator= et les constructeurs par copie ici
-	Head& operator=(const Head&) {}
 	Head(const Head&) {}
 
 	static Head m_instance; /*!< Représente l'unique instance du Head */
