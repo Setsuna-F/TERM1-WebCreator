@@ -21,14 +21,11 @@
 class Body : public Element
 {
 public:
-	static Body& getInstance();
-	virtual ~Body();
+	static Body *getInstance();
 private:
-	//On empêche les operator= et les constructeurs par copie ici
-	Body(const Body&) {}
-
-	static Body m_instance; /*!< Représente l'unique instance du Body */
+	static Body *m_instance; /*!< Représente l'unique instance du Body */
 	Body();
+	~Body();
 	
 };
 #endif

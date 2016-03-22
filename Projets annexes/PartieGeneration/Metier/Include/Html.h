@@ -13,15 +13,14 @@
 class Html : public Element
 {
 public:
-	static Html& getInstance();
+	static Html *getInstance();
 private:
 	//On empêche les operator= et les constructeurs par copie ici
-	Html(const Html&) {}
-	Body m_body;
-	Head m_head;
-	static Html m_instance; /*!< Représente l'unique instance du Html */
+	Body *m_body;
+	Head *m_head;
+	static Html *m_instance; /*!< Représente l'unique instance du Html */
 	Html();
-	virtual ~Html();
+	~Html();
 };
 
 #endif

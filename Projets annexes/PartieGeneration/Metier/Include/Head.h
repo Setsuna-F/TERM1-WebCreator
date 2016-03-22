@@ -22,14 +22,11 @@
 class Head : public Element
 {
 public:
-	static Head& getInstance();
-	virtual ~Head();
+	static Head *getInstance();
 
 private:
-	//On empêche les operator= et les constructeurs par copie ici
-	Head(const Head&) {}
-
-	static Head m_instance; /*!< Représente l'unique instance du Head */
+	static Head *m_instance; /*!< Représente l'unique instance du Head */
 	Head();
-	};
+	~Head();
+};
 #endif
