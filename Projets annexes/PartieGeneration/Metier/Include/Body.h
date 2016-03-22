@@ -11,6 +11,7 @@
 #define BODY_H
 
 #include <iostream>
+#include <vector>
 #include "Element.h"
 
 

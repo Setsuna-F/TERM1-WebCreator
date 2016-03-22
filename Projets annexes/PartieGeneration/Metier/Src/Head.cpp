@@ -4,7 +4,7 @@ using namespace std;
 
 Head *Head::m_instance;
 
-Head::Head() : Element("Head") {}
+Head::Head() : Element("head") {}
 
 Head::~Head() {}
 

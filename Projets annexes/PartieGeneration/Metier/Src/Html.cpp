@@ -4,9 +4,9 @@ using namespace std;
 
 Html *Html::m_instance;
 
-Html::Html() : Element("Html") {
-	m_body = Body::getInstance();
-	m_head = Head::getInstance();
+Html::Html() : Element("html") {
+	this->addElement(*Head::getInstance());
+	this->addElement(*Body::getInstance());
 }
 
 Html::~Html() {}

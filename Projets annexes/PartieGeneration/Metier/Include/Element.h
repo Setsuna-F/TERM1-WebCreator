@@ -57,6 +57,7 @@ class Element
 		virtual void setStyle(std::string, std::string);
 
 		virtual void addElement(Element&);
+		virtual void toString()const;
 };
 
 std::string generateId(std::string);
