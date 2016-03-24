@@ -17,6 +17,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include "IdHandler.h"
 
 
  /*
@@ -60,6 +61,6 @@ class Element
 		virtual void toString()const;
 };
 
-std::string generateId(std::string);
+
 
 #endif

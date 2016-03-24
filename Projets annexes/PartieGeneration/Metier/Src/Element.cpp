@@ -2,16 +2,6 @@
 
 using namespace std;
 
-/*
- * @fn generateId
- * @brief Fonction qui génère l'ID d'un élément (pour le CSS)
- * @param string elementName : le nom de l'élément
- * @return l'ID de l'élément, sous la forme : elementNameX (x étant la xième occurence du type de l'élément)
- */
-string generateId(string elementName)
-{
-    return elementName;
-}
 
 Element::Element() : m_id(""), m_elementName(""), m_content("") {}
 
@@ -76,11 +66,11 @@ void Element::addElement(Element& e)
 
 void Element::toString() const 
 {
-    cout << "<" << m_elementName << ">";
+    cout << "<" << m_elementName << " id = \"" << m_id << "\">";
     for(unsigned int i=0;i<m_childElements.size();i++) 
     {
         cout << "\n\t";
         m_childElements[i]->toString();
     }
-    cout << "</" << m_elementName << ">";
+    cout << "</" << m_elementName << ">\n";
 }
