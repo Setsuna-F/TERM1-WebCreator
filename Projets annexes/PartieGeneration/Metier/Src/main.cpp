@@ -8,14 +8,16 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	PageWeb web("TestPage");
-	Html* html = web.getRoot();
+	Site s;
+	s.addPage();
+	PageWeb* web = s.getPage(0);
+	Html* html = web->getRoot();
 	Body* body = html->getBody();
 	Element e("p","Coucou");
 	body->addElement(e);
 	Element e2("p","C'est le projet");
 	body->addElement(e2);
-	web.toString();
+	s.toString();
 	cout << "\n";
-    return 0;
+  return 0;
 }
