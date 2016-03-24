@@ -1,4 +1,4 @@
-Voilà les deux schémas JSON pour un projet sur WebCreator et pour une page web
+﻿Voilà les deux schémas JSON pour un projet sur WebCreator et pour une page web
 
 Reste à faire le schéma pour les modules du logiciel..
 
@@ -42,7 +42,8 @@ Reste à faire le schéma pour les modules du logiciel..
             "type" : "string",
             "description" : "Lien vers le dossier files, pouvant contenir des images, ou des fichiers .pdf par exemple"
         }
-    }
+    },
+    "required": ["nom", "type", "html"]
 }
 ```
 ## Page web
@@ -149,6 +150,7 @@ Reste à faire le schéma pour les modules du logiciel..
                 }
             }
         }
-    }
+    },
+    "required": ["html", "head", "body"]
 }
 ```
