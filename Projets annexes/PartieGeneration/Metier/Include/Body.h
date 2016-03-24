@@ -22,11 +22,9 @@
 class Body : public Element
 {
 public:
-	static Body *getInstance();
-private:
-	static Body *m_instance; /*!< Représente l'unique instance du Body */
 	Body();
 	~Body();
-	
+private:
+
 };
 #endif

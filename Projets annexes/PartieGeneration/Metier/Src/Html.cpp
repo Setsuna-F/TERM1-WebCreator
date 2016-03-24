@@ -2,20 +2,21 @@
 
 using namespace std;
 
-Html *Html::m_instance;
-
 Html::Html() : Element("html") {
-	this->addElement(*Head::getInstance());
-	this->addElement(*Body::getInstance());
+	m_body = new Body();
+	m_head = new Head();
+	this->addElement(*m_head);
+	this->addElement(*m_body);
 }
 
 Html::~Html() {}
 
-Html *Html::getInstance() 
+Body* Html::getBody() 
 {
-	if(m_instance == NULL) {
-		m_instance = new Html;
-	}
-	return m_instance;
+	return m_body;
 }
 
+Head* Html::getHead() 
+{
+	return m_head;
+}

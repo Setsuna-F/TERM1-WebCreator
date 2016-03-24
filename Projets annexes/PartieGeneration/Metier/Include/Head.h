@@ -4,7 +4,7 @@
  * @author {Lucas CHABALIER, Théophile MANDON}
  * @version 0.1
  * @date 19/03/2016
- * Classe représentant le Head d'une page web, qui existe en un seul exemplaire (singleton)
+ * Classe représentant le Head d'une page web, qui existe en un seul exemplaire dans la page web
    Contient les liens vers les scripts JS, feuilles de style CSS, et définitions des métadonnées
  */
 
@@ -14,19 +14,16 @@
 #include <iostream>
 #include "Element.h"
 
-
  /*
   * @class Head
-  * Classe Singleton héritée d'Element qui contient l'ensemble des liens css,js, et les métadonnées d'une page web
+  * Classe  héritée d'Element qui contient l'ensemble des liens css,js, et les métadonnées d'une page web
   */
 class Head : public Element
 {
 public:
-	static Head *getInstance();
-
-private:
-	static Head *m_instance; /*!< Représente l'unique instance du Head */
 	Head();
 	~Head();
+private:
+
 };
 #endif

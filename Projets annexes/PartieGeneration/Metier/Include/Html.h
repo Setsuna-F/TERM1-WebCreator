@@ -8,19 +8,20 @@
 
  /*
   * @class Html
-  * Classe Singleton héritée d'Element qui contient l'ensemble de la page web
+  * Classe héritée d'Element qui contient l'ensemble de la page web
   */
 class Html : public Element
 {
 public:
-	static Html *getInstance();
-private:
-	//On empêche les operator= et les constructeurs par copie ici
-	Body *m_body;
-	Head *m_head;
-	static Html *m_instance; /*!< Représente l'unique instance du Html */
 	Html();
 	~Html();
+
+	Body* getBody();
+	Head* getHead();
+private:
+	Body *m_body;
+	Head *m_head;
+
 };
 
 #endif
