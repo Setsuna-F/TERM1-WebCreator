@@ -22,7 +22,7 @@ public:
 
 	PageWeb* getPage(int);
 	void addPage();
+	void generate();{}
 };
-
 
 #endif
