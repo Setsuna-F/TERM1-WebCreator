@@ -79,6 +79,10 @@ Reste à faire le schéma pour les modules du logiciel..
             "type" : "object",
             "description" : "Représente la balise head d'une page web",
             "properties" : {
+                "title" : {
+                    "type" : "string",
+                    "description" : "Titre de la page"
+                },
                 "meta" : {
                     "type":"array",
                     "minItems" : 0,
@@ -147,10 +151,14 @@ Reste à faire le schéma pour les modules du logiciel..
                     "items" : {"$ref" : "#/definitions/element"},
                     "uniqueItems" : false,
                     "description" : "Contient les éléments fils de l'élément ; peut être vide (ex : img)"
+                },
+                "texte" : {
+                    "type" : "string",
+                    "description" : "le texte contenu dans la balise"
                 }
             }
         }
     },
-    "required": ["html", "head", "body"]
+    "required": ["page"]
 }
 ```
