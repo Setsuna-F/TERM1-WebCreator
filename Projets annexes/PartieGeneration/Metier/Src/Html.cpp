@@ -11,12 +11,21 @@ Html::Html() : Element("html") {
 
 Html::~Html() {}
 
-Body* Html::getBody() 
+Body* Html::getBody()
 {
 	return m_body;
 }
 
-Head* Html::getHead() 
+Head* Html::getHead()
 {
 	return m_head;
+}
+
+string Html::toJson()
+{
+    string res="\t\t\"html\" : {";
+    res+=m_head->toJson();
+    res+=m_body->toJson();
+    res="\t\t}";
+    return res;
 }

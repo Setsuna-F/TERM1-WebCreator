@@ -66,12 +66,58 @@ void Element::addElement(Element& e)
 
 void Element::toString() const
 {
-    cout << "<" << m_elementName << " id = \"" << m_id << "\">";
-    cout<<m_content;
+    if(m_elementName=="textException")
+    {
+        cout<<m_content;
+    }
+    else {
+        cout << "<" << m_elementName << " id = \"" << m_id << "\">";
+        cout<<m_content;
+        for(unsigned int i=0;i<m_childElements.size();i++)
+        {
+            cout << "\n\t";
+            m_childElements[i]->toString();
+        }
+        cout << "</" << m_elementName << ">\n";
+    }
+}
+
+string Element::toJson()
+{
+    string res="\t\t\t\t\t{ \"element\" : {";
+    res+="\t\t\t\t\t\t\"type\" : \""+m_elementName+"\",\n";
+    res+="\t\t\t\t\t\t\"id\" : \""+m_id+"\",\n";
+    res+="\t\t\t\t\t\t\"attributes\" : [";
+    for(map<string,string>::iterator i=m_attributes.begin();i!=m_attributes.end();i++)
+    {
+        if(i!=m_attributes.begin())
+        {
+            res+=", ";
+        }
+        res+="{ \"attribute\" : \""+i->first+"\", \"value\" : \""+i->second+"\"}";
+    }
+    res+="],\n";
+    res+="\t\t\t\t\t\t\"style\" : [";
+    for(map<string,string>::iterator i=m_styles.begin();i!=m_styles.end();i++)
+    {
+        if(i!=m_styles.begin())
+        {
+            res+=", ";
+        }
+        res+="{ \"style\" : \""+i->first+"\", \"value\" : \""+i->second+"\"}";
+    }
+    res+="],\n";
+    res+="\t\t\t\t\t\t\"texte\" : \""+m_content+"\",\n";
+    res+="\t\t\t\t\t\t\"content\" : [";
     for(unsigned int i=0;i<m_childElements.size();i++)
     {
-        cout << "\n\t";
-        m_childElements[i]->toString();
+        if(i!=0)
+        {
+            res+=",\n";
+        }
+        res+=m_childElements[i]->toJson();
     }
-    cout << "</" << m_elementName << ">\n";
+    res+="],\n";
+    res+="\t\t\t\t\t}}";
+    return res;
 }

@@ -23,7 +23,11 @@ class Head : public Element
 public:
 	Head();
 	~Head();
-private:
 
+	std::string toJson();
+private:
+    std::string m_title;
+    std::vector<std::string> m_scripts;
+    std::vector<std::string> m_links;
 };
 #endif

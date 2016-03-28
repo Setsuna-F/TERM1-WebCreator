@@ -24,7 +24,7 @@
   * @class Element
   * Classe composite représentant un élément web (un <p>...</p> par exemple)
   */
-class Element 
+class Element
 {
 	private:
 		std::string m_id; /*!< id de l'élément (pour la gestion du CSS) */
@@ -32,15 +32,15 @@ class Element
 		std::map<std::string, std::string> m_attributes; /*!< Attributs HTML de l'élément (width,height pour une image par exemple) */
         std::map<std::string, std::string> m_styles; /*!< Style CSS propres à l'élément et ses éventuels fils */
 		std::vector<Element*> m_childElements; /*!< Eléments fils (le vector peut-être vide) */
-		
+
 		std::string m_content; /*!< Contenu de l'élément, du texte (utilisé au début du dev) */
-		
+
 	public:
 		Element();
 		Element(std::string);
 		Element(std::string, std::string);
 		virtual ~Element();
-		
+
 		//Getters for string attributes
 		virtual std::string getId()const;
 		virtual std::string getElementName()const;
@@ -49,7 +49,7 @@ class Element
 		virtual void setId(std::string);
 		virtual void setElementName(std::string);
 		virtual void setContent(std::string);
-		
+
         //Getters for map elements
         virtual std::string getAttribute(std::string);
         virtual std::string getStyle(std::string);
@@ -59,6 +59,8 @@ class Element
 
 		virtual void addElement(Element&);
 		virtual void toString()const;
+
+		virtual std::string toJson();
 };
 
 

@@ -31,6 +31,8 @@ class PageWeb
 		Html* getRoot();
 
 		void toString()const;
+
+		std::string toJson();
 };
 
 #endif

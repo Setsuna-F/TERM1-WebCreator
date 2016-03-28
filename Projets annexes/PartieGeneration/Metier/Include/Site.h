@@ -33,6 +33,8 @@ public:
 	PageWeb* getPage(unsigned int);
 	void addPage();
 	void generate();
+
+	std::string toJson();
 };
 
 #endif

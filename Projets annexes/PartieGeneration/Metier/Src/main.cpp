@@ -21,5 +21,6 @@ int main(int argc, char *argv[])
 	body->addElement(e2);
 	s.generate();
 	cout << "\n";
+	cout<<endl<<endl<<s.toJson();
   return 0;
 }

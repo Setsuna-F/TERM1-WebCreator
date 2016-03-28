@@ -24,7 +24,9 @@ class Body : public Element
 public:
 	Body();
 	~Body();
-private:
 
+	std::string toJson();
+private:
+    std::vector<Element> m_childs;
 };
 #endif

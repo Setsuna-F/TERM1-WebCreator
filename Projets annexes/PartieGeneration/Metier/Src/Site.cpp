@@ -38,3 +38,22 @@ void Site::generate()
 		m_projet[i].toString();
 	}
 }
+
+string Site::toJson()
+{
+    string res ="{\n";
+    res+="\t\"nom\" : \""+m_nomProjet+"\",\n";
+    res+="\t\"type\" : \"projet\",\n";
+    res+="\t\"html\" : [";
+    for(unsigned int i=0;i<m_projet.size();i++)
+    {
+        res+="\""+m_projet[i].getNom()+".json\"";
+        if(i<m_projet.size())
+        {
+            res+=", ";
+        }
+    }
+    res+="]\n";
+    res+="}";
+    return res;
+}

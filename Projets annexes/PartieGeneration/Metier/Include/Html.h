@@ -28,6 +28,8 @@ public:
 
 	Body* getBody();
 	Head* getHead();
+
+	std::string toJson();
 private:
 	Body *m_body;
 	Head *m_head;
