@@ -9,11 +9,11 @@ Site::Site(string nom) : m_numberOfPagesMax(1), m_nomProjet(nom) {}
 string Site::getNomProjet()const { return m_nomProjet;}
 void Site::setNomProjet(string nom) {m_nomProjet = nom;}
 
-PageWeb* Site::getPage(int i)
+PageWeb* Site::getPage(unsigned int i)
 {
 	if(i >= m_numberOfPagesMax)
 		return NULL;
-	return m_projet[i];
+	return &m_projet[i];
 }
 
 void Site::addPage()
@@ -32,7 +32,7 @@ void Site::addPage()
 void Site::generate()
 {
 	cout << "Projet site web : " << m_nomProjet <<endl;
-  for(int i=0;i<=m_projet.size();i++)
+  for(unsigned int i=0;i<=m_projet.size();i++)
 	{
 		cout << "Page numero " << i << "\n\n";
 		m_projet[i].toString();

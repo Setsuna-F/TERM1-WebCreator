@@ -4,7 +4,7 @@
  * @author {Lucas CHABALIER, Théophile MANDON}
  * @version 0.1
  * @date 19/03/2016
- * Classe représentant le body d'une page web, qui existe en un seul exemplaire (singleton)
+ * Classe représentant le body d'une page web
  */
 
 #ifndef BODY_H
@@ -17,7 +17,7 @@
 
  /*
   * @class Body
-  * Classe Singleton héritée d'Element qui contient l'ensemble des éléments de la page ( = <body>...</body>)
+  * Classe héritée d'Element qui contient l'ensemble des éléments de la page ( = <body>...</body>)
   */
 class Body : public Element
 {

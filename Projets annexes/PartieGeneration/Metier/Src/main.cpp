@@ -3,6 +3,8 @@
 #include "../Include/Html.h"
 #include "../Include/Element.h"
 #include "../Include/PageWeb.h"
+#include "../Include/Site.h"
+
 
 using namespace std;
 
@@ -17,7 +19,7 @@ int main(int argc, char *argv[])
 	body->addElement(e);
 	Element e2("p","C'est le projet");
 	body->addElement(e2);
-	s.toString();
+	s.generate();
 	cout << "\n";
   return 0;
 }

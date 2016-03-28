@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string generateId(string id) 
+string generateId(string id)
 {
 	if(ids.find(id) == ids.end())
 	{

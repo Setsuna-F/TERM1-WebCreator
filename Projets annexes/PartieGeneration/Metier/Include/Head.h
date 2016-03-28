@@ -4,7 +4,7 @@
  * @author {Lucas CHABALIER, Théophile MANDON}
  * @version 0.1
  * @date 19/03/2016
- * Classe représentant le Head d'une page web, qui existe en un seul exemplaire dans la page web
+ * Classe représentant le Head d'une page web
    Contient les liens vers les scripts JS, feuilles de style CSS, et définitions des métadonnées
  */
 

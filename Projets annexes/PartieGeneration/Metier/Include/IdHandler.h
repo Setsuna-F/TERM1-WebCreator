@@ -1,3 +1,13 @@
+/**
+ * @file IdHandler.h
+ * @brief Classe représentant la gestion des id pour les balises
+ * @author {Lucas CHABALIER, Théophile MANDON}
+ * @version 0.1
+ * @date 19/03/2016
+ * Classe représentant la gestion des id pour les balises
+   Va générer les id des balises de la forme : nomBaliseX avec X le numéro correspondant au nombre de fois ou la balise a été utilisée
+ */
+
 #ifndef IDHANDLER_H
 #define IDHANDLER_H
 

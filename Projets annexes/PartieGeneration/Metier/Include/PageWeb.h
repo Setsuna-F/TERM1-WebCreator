@@ -1,3 +1,13 @@
+/**
+ * @file PageWeb.h
+ * @brief Classe représentant la page web
+ * @author {Lucas CHABALIER, Théophile MANDON}
+ * @version 0.1
+ * @date 19/03/2016
+ * Classe représentant la page web
+   Contient le lien vers le html et le nom de la page
+ */
+
 #ifndef PAGEWEB_H
 #define PAGEWEB_H
 
@@ -6,7 +16,7 @@
 #include "Html.h"
 
 //Contient un HTML
-class PageWeb 
+class PageWeb
 {
 	private:
 		std::string m_nom;

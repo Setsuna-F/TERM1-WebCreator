@@ -59,15 +59,16 @@ void Element::setStyle(string styleName , string style)
     m_styles[styleName] = style;
 }
 
-void Element::addElement(Element& e) 
+void Element::addElement(Element& e)
 {
     m_childElements.push_back(&e);
 }
 
-void Element::toString() const 
+void Element::toString() const
 {
     cout << "<" << m_elementName << " id = \"" << m_id << "\">";
-    for(unsigned int i=0;i<m_childElements.size();i++) 
+    cout<<m_content;
+    for(unsigned int i=0;i<m_childElements.size();i++)
     {
         cout << "\n\t";
         m_childElements[i]->toString();
