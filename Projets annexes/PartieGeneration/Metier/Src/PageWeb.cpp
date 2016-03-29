@@ -23,7 +23,7 @@ string PageWeb::toJson()
     res+="\t\"page\" : \""+m_nom+"\",\n";
     res+="\t\"content\" : {";
     res+=m_root.toJson();
-    res+="\t}";
+    res+="\n\t}\n";
     res+="}";
     return res;
 }

@@ -48,7 +48,7 @@ string Site::toJson()
     for(unsigned int i=0;i<m_projet.size();i++)
     {
         res+="\""+m_projet[i].getNom()+".json\"";
-        if(i<m_projet.size())
+        if(i<m_projet.size()-1)
         {
             res+=", ";
         }

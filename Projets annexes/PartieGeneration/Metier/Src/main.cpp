@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include "../Include/Html.h"
 #include "../Include/Element.h"
 #include "../Include/PageWeb.h"
@@ -13,6 +14,7 @@ int main(int argc, char *argv[])
 	Site s;
 	s.addPage();
 	PageWeb* web = s.getPage(0);
+	web->setNom("Test");
 	Html* html = web->getRoot();
 	Body* body = html->getBody();
 	Element e("p","Coucou");
@@ -22,5 +24,10 @@ int main(int argc, char *argv[])
 	s.generate();
 	cout << "\n";
 	cout<<endl<<endl<<s.toJson();
+	ofstream file(s.getPage(0)->getNom()+".json", ios::out | ios::trunc);
+	if(file)
+    {
+        file<<s.getPage(0)->toJson();
+    }
   return 0;
 }
