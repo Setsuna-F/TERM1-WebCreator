@@ -2,9 +2,86 @@
 
 using namespace std;
 
-Head::Head() : Element("head") {}
+Head::Head() : m_title("") {}
+
+Head::Head(std::string title) : m_title(title) {}
 
 Head::~Head() {}
+
+string Head::getTitle() const
+{
+    return m_title;
+}
+
+void Head::setTitle(string title)
+{
+    m_title = title;
+}
+
+string Head::getScript(unsigned int i) const
+{
+    if(i<m_scripts.size())
+    {
+        return m_scripts[i];
+    }
+    else
+    {
+        return "";
+    }
+}
+
+void Head::addScript(string script)
+{
+    m_scripts.push_back(script);
+}
+
+void Head::removeScript(unsigned int i)
+{
+    if(i<m_scripts.size())
+    {
+        m_scripts.erase(m_scripts.begin()+i);
+    }
+}
+
+string Head::getLink(unsigned int i) const
+{
+    if(i<m_links.size())
+    {
+        return m_links[i];
+    }
+    else
+    {
+        return "";
+    }
+}
+
+void Head::addLink(string link)
+{
+    m_links.push_back(link);
+}
+
+void Head::removeLink(unsigned int i)
+{
+    if(i<m_links.size())
+    {
+        m_links.erase(m_links.begin()+i);
+    }
+}
+
+void Head::toString() const
+{
+    cout << "<head>\n";
+    cout << "<title>" << m_title << "</title>";
+    for(unsigned int i=0;i<m_links.size();i++)
+    {
+        cout << "<link href=\"" << m_links[i] <<"\" />\n";
+    }
+    for(unsigned int i=0;i<m_scripts.size();i++)
+    {
+        cout << "<scipt src=\"" << m_scripts[i] << "\" />\n";
+    }
+    cout << "</head>\n";
+}
 
 string Head::toJson()
 {

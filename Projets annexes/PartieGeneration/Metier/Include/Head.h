@@ -22,9 +22,24 @@ class Head : public Element
 {
 public:
 	Head();
+	Head(std::string);
 	~Head();
 
 	std::string toJson();
+	void toString()const;
+
+	//Getters & setters
+	std::string getTitle()const;
+	void setTitle(std::string);
+
+	std::string getScript(unsigned int)const;
+	void addScript(std::string);
+	void removeScript(unsigned int);
+
+	std::string getLink(unsigned int)const;
+	void addLink(std::string);
+	void removeLink(unsigned int);
+
 private:
     std::string m_title;
     std::vector<std::string> m_scripts;
