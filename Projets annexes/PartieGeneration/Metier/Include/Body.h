@@ -25,6 +25,11 @@ public:
 	Body();
 	~Body();
 
+    Element* getChild(unsigned int);
+    void addChild(Element);
+    void removeChild(unsigned int);
+
+    void toString() const;
 	std::string toJson();
 private:
     std::vector<Element> m_childs;

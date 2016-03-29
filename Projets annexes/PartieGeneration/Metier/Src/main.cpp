@@ -16,9 +16,9 @@ int main(int argc, char *argv[])
 	Html* html = web->getRoot();
 	Body* body = html->getBody();
 	Element e("p","Coucou");
-	body->addElement(e);
+	body->addChild(e);
 	Element e2("p","C'est le projet");
-	body->addElement(e2);
+	body->addChild(e2);
 	s.generate();
 	cout << "\n";
 	cout<<endl<<endl<<s.toJson();
