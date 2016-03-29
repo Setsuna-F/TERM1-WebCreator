@@ -32,7 +32,7 @@ void Site::addPage()
 void Site::generate()
 {
 	cout << "Projet site web : " << m_nomProjet <<endl;
-  for(unsigned int i=0;i<=m_projet.size();i++)
+  for(unsigned int i=0;i<m_projet.size();i++)
 	{
 		cout << "Page numero " << i << "\n\n";
 		m_projet[i].toString();
