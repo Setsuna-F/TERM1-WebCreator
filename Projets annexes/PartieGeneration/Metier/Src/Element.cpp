@@ -5,15 +5,15 @@ using namespace std;
 
 Element::Element() : m_id(""), m_elementName(""), m_content("") {}
 
-Element::Element(string elementName) : m_content("")
+Element::Element(string moduleName) : m_content("")
 {
-    this->m_elementName = elementName;
+    Module::moduleToElement(this);
     m_id = generateId(elementName);
 }
 
-Element::Element(string elementName, string content)
+Element::Element(string moduleName, string content)
 {
-    this->m_elementName = elementName;
+    Module::moduleToElement(this);
     this->m_content=content;
     m_id = generateId(elementName);
 }
@@ -24,10 +24,12 @@ Element::~Element() {}
 string Element::getId() const {return m_id;}
 string Element::getElementName() const {return m_elementName;}
 string Element::getContent() const {return m_content;}
+string Element::getModuleName() const {return m_moduleName;}
 
 void Element::setContent(string content) {this->m_content=content;}
 void Element::setElementName(string elementName) {this->m_elementName=elementName;}
 void Element::setId(string id) {this->m_id=id;}
+
 
 //Getters for map elements
 string Element::getAttribute(string attributeName)
