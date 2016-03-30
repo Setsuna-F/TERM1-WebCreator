@@ -1,21 +1,22 @@
 #include "../Include/Element.h"
+#include "../Include/Module.h"
 
 using namespace std;
 
 
 Element::Element() : m_id(""), m_elementName(""), m_content("") {}
 
-Element::Element(string moduleName) : m_content("")
+Element::Element(string moduleName) : m_content(""),  m_moduleName(moduleName)
 {
-    Module::moduleToElement(this);
-    m_id = generateId(elementName);
+    moduleToElement(*this);
+    m_id = generateId(m_elementName);
 }
 
-Element::Element(string moduleName, string content)
+Element::Element(string moduleName, string content) : m_moduleName(moduleName)
 {
-    Module::moduleToElement(this);
+    moduleToElement(*this);
     this->m_content=content;
-    m_id = generateId(elementName);
+    m_id = generateId(m_elementName);
 }
 
 Element::~Element() {}

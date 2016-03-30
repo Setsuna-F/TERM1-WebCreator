@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	Site s;
+	/*Site s;
 	s.addPage();
 	PageWeb* web = s.getPage(0);
 	web->setNom("Test");
@@ -25,6 +25,9 @@ int main(int argc, char *argv[])
 	cout<<endl<<endl<<s.toJson();
 	cout<<endl<<endl<<s.getPage(0)->toJson();
 	cout<<endl<<endl<<html->toJson();
-	s.sauvegarde();
+	s.sauvegarde();*/
+
+	Element e("p_perso");
+	e.toString();
   return 0;
 }

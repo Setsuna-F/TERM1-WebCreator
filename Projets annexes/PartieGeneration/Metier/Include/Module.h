@@ -2,8 +2,9 @@
 #define MODULE_H
 
 #include <iostream>
+#include <string>
+#include <fstream>
 #include "Element.h"
-
 
 /*
  * @fn moduleToElement
@@ -11,6 +12,6 @@
  * @param Element &elem : Un élément, qui a au moins un nom de module
  * @return Modifie l'élément si le JSON est correctement trouvé, sinon ne fait rien.
  */
-void moduleToElement(Element &);
+void moduleToElement(Element& e);
 
 #endif

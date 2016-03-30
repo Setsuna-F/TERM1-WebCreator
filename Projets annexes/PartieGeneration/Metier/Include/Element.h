@@ -20,6 +20,7 @@
 #include "IdHandler.h"
 
 
+
  /*
   * @class Element
   * Classe composite représentant un élément web (un <p>...</p> par exemple)
