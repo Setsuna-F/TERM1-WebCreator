@@ -26,6 +26,6 @@ string Html::toJson()
     string res="\t\t\"html\" : {";
     res+=m_head->toJson();
     res+=m_body->toJson();
-    res="\t\t}";
+    res+="\t\t}";
     return res;
 }

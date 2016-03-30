@@ -44,6 +44,10 @@ string Body::toJson()
     res+="\t\t\t\t{ \"content\" : [\n";
     for(unsigned int i=0;i<m_childs.size();i++)
     {
+        if(i>0)
+        {
+            res+=", \n";
+        }
         res+=m_childs[i].toJson();
     }
     res+="\t\t\t\t]}";

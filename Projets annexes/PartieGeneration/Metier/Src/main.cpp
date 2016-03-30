@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 	cout << "\n";
 	cout<<endl<<endl<<s.toJson();
 	cout<<endl<<endl<<s.getPage(0)->toJson();
+	cout<<endl<<endl<<html->toJson();
 	s.sauvegarde();
   return 0;
 }

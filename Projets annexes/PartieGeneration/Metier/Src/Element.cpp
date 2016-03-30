@@ -84,7 +84,7 @@ void Element::toString() const
 
 string Element::toJson()
 {
-    string res="\t\t\t\t\t{ \"element\" : {";
+    string res="\t\t\t\t\t{ \"element\" : {\n";
     res+="\t\t\t\t\t\t\"type\" : \""+m_elementName+"\",\n";
     res+="\t\t\t\t\t\t\"id\" : \""+m_id+"\",\n";
     res+="\t\t\t\t\t\t\"attributes\" : [";
@@ -117,7 +117,7 @@ string Element::toJson()
         }
         res+=m_childElements[i]->toJson();
     }
-    res+="],\n";
-    res+="\t\t\t\t\t}}";
+    res+="]\n";
+    res+="\t\t\t\t\t}}\n";
     return res;
 }
