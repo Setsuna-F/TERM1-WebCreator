@@ -27,3 +27,16 @@ string PageWeb::toJson()
     res+="}";
     return res;
 }
+
+void PageWeb::sauvegarde()
+{
+    ofstream file(getNom()+".json", ios::out | ios::trunc);
+	if(file)
+    {
+        file<<toJson();
+    }
+    else
+    {
+        cerr<<"Echec de la sauvegarde de la page " <<getNom()<<"\n";
+    }
+}

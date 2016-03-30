@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
 #include "Html.h"
 
 //Contient un HTML
@@ -33,6 +34,7 @@ class PageWeb
 		void toString()const;
 
 		std::string toJson();
+		void sauvegarde();
 };
 
 #endif

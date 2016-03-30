@@ -57,3 +57,20 @@ string Site::toJson()
     res+="}";
     return res;
 }
+
+void Site::sauvegarde()
+{
+    ofstream file(getNomProjet()+".json", ios::out | ios::trunc);
+	if(file)
+    {
+        file<<toJson();
+        for(unsigned int i=0;i<m_projet.size();i++)
+        {
+            m_projet[i].sauvegarde();
+        }
+    }
+    else
+    {
+        cerr<<"Echec de la sauvegarde du projet "<<getNomProjet()<<"\n";
+    }
+}

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <fstream>
 #include "../Include/Html.h"
 #include "../Include/Element.h"
 #include "../Include/PageWeb.h"
@@ -24,10 +23,7 @@ int main(int argc, char *argv[])
 	s.generate();
 	cout << "\n";
 	cout<<endl<<endl<<s.toJson();
-	ofstream file(s.getPage(0)->getNom()+".json", ios::out | ios::trunc);
-	if(file)
-    {
-        file<<s.getPage(0)->toJson();
-    }
+	cout<<endl<<endl<<s.getPage(0)->toJson();
+	s.sauvegarde();
   return 0;
 }

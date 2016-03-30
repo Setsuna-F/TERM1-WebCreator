@@ -35,6 +35,7 @@ public:
 	void generate();
 
 	std::string toJson();
+	void sauvegarde();
 };
 
 #endif
