@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include "Element.h"
+#include "jsoncpp/json/json.h"
 
 /*
  * @fn moduleToElement
