@@ -6,7 +6,7 @@ using namespace std;
 
 Element::Element() : m_id(""), m_elementName(""), m_content("") {}
 
-Element::Element(string moduleName) : m_content(""),  m_moduleName(moduleName)
+Element::Element(string moduleName) : m_moduleName(moduleName), m_content("")
 {
     moduleToElement(*this);
     m_id = generateId(m_elementName);
