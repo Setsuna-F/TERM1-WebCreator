@@ -10,11 +10,12 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-	/*Site s;
+	Site s("proj",15);
 	s.addPage();
 	PageWeb* web = s.getPage(0);
 	web->setNom("Test");
 	Html* html = web->getRoot();
+	html->getHead()->setTitle("Le projet");
 	Body* body = html->getBody();
 	Element e("p","Coucou");
 	body->addChild(e);
@@ -24,10 +25,12 @@ int main(int argc, char *argv[])
 	cout << "\n";
 	cout<<endl<<endl<<s.toJson();
 	cout<<endl<<endl<<s.getPage(0)->toJson();
-	cout<<endl<<endl<<html->toJson();
-	s.sauvegarde();*/
+	s.sauvegarde();
+    s.charger("Test.json");
+    s.generate();
 
-	Element e("p_perso");
-	e.toString();
+    /*cout<<endl<<endl;
+	Element r("p_perso"); //Je like cette petite guerre des commentaires ou on commente les tests de l'autre
+	r.toString();*/
   return 0;
 }

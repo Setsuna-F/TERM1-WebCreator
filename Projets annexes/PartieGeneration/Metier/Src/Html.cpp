@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Html::Html() : Element("html") {
+Html::Html(){
 	m_body = new Body();
 	m_head = new Head();
 	this->addElement(*m_head);
@@ -23,7 +23,7 @@ Head* Html::getHead()
 
 string Html::toJson()
 {
-    string res="\t\t\"html\" : {";
+    string res="\t\t\"html\" : {\n";
     res+=m_head->toJson();
     res+=m_body->toJson();
     res+="\t\t}";

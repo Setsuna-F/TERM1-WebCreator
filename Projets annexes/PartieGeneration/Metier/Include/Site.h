@@ -19,23 +19,26 @@
 //Contient un ensemble de pages web
 class Site
 {
-private:
-	unsigned int m_numberOfPagesMax;
-	std::string m_nomProjet;
-	std::vector<PageWeb> m_projet;
-public:
-	Site();
-	Site(std::string);
+    private:
+        unsigned int m_numberOfPagesMax;
+        std::string m_nomProjet;
+        std::vector<PageWeb> m_projet;
+    public:
+        Site();
+        Site(std::string, int);
 
-	std::string getNomProjet()const;
-	void setNomProjet(std::string);
+        void charger(std::string);
+        void clearProjet();
 
-	PageWeb* getPage(unsigned int);
-	void addPage();
-	void generate();
+        std::string getNomProjet()const;
+        void setNomProjet(std::string);
 
-	std::string toJson();
-	void sauvegarde();
+        PageWeb* getPage(unsigned int);
+        void addPage();
+        void generate();
+
+        std::string toJson();
+        void sauvegarde();
 };
 
 #endif

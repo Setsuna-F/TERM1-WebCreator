@@ -15,6 +15,7 @@
 #include <string>
 #include <fstream>
 #include "Html.h"
+#include "json/json.h"
 
 //Contient un HTML
 class PageWeb
@@ -25,6 +26,9 @@ class PageWeb
 	public:
 		PageWeb();
 		PageWeb(std::string);
+
+        Element* recupererElement(Json::Value);
+        void charger(std::string);
 
 		std::string getNom()const;
 		void setNom(std::string);
