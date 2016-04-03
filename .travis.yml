@@ -1,8 +1,27 @@
+langage : c++
+compiler: g++
+
 before_install:
+ - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
+ - gcc --version
  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
  - sudo apt-get update -qq
+
+env: COMPILER_NAME=gcc CXX=g++-5 CC=gcc-5
+
+install:
  - sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
  - sudo apt-get install qt5-default qttools5-dev-tools
+ - sudo apt-get install libboost-all-dev
+
+addons:
+  apt:
+    sources:
+    - llvm-toolchain-precise
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-5
+
 
 script:
  - qmake TERM1-WebCreator.pro
@@ -11,6 +30,11 @@ script:
  - qmake
  - make
  - ./test
+ - cd ../Projets\ annexes/PartieGeneration/Metier
+ - make
+ - cd Test
+ - g++ -o tests test.cpp -lboost_unit_test_framework
+ - ./tests
 
 notifications:
   slack: wookieteam:N0hJjPcDdWBDyJ7QzOzjlspG#travis-builds
